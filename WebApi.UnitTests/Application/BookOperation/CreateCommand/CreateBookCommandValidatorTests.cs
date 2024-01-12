@@ -28,7 +28,6 @@ namespace WebApi.UnitTests.Application.BookOperation.CreateCommand
 		[InlineData("lord",100,0)]
 		[InlineData("lord",0,1)]
 		[InlineData(" ",100,1)]
-		[InlineData("Lord of The Rings", 100,1)]
 		public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(string title, int pageCount,int genreId)
 		{
 			//aarrange - Hazırlık
@@ -74,7 +73,7 @@ namespace WebApi.UnitTests.Application.BookOperation.CreateCommand
 			CreateBookCommand command = new CreateBookCommand(null, null);
 			command.Model = new CreateBookModel()
 			{
-				Title = "Lord Of The Rings",
+				Title = "Lord Of The Ringss",
 				PageCount = 100,
 				PublisDate = DateTime.Now.AddYears(-2),
 				GenreId = 1

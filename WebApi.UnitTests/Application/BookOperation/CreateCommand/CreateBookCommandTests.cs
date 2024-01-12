@@ -51,7 +51,7 @@ namespace WebApi.UnitTests.Application.BookOperation.Command
 		{
 			//arrange
 			CreateBookCommand command = new CreateBookCommand( _context, _mapper);
-			CreateBookModel model = new CreateBookModel() { Title = "Hobbit", PageCount = 1000, PublisDate = DateTime.Now.Date.AddYears(-10), GenreId = 1 };
+			CreateBookModel model = new CreateBookModel() { Title = "Hobbit", PageCount = 100, PublisDate = DateTime.Now.Date.AddYears(-10), GenreId = 1 };
 			command.Model = model;
 
 			//act

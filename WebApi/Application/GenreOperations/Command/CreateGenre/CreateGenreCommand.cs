@@ -19,7 +19,7 @@ namespace WebApi.Application.GenreOperations.Command.CreateGenre
             var genre = _dbContext.Genres.SingleOrDefault(x=>x.Name ==Model.Name);
             if (genre != null) 
             {
-                throw new InvalidOperationException("Kitap türü zaten emvcut");
+                throw new InvalidOperationException("Kitap türü zaten mevcut");
             }
             genre = new Genre();
             genre.Name = Model.Name;
